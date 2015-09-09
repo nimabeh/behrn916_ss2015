@@ -1,0 +1,1 @@
+hello this is the homework for first week!
