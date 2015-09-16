@@ -1,0 +1,1 @@
+for this homework I worked with series of different functions, also I did my own experiment for finding the equation of rythmic and natural movements. yuo can wathc the video here:  https://www.youtube.com/watch?v=XYsZvwehFOU&feature=youtu.be
