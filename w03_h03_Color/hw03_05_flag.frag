@@ -2,44 +2,29 @@
 precision mediump float;
 #endif
 
-#define PI 3.14159265359
+#define MAX_ITER 8
 
-uniform vec2 u_resolution;
-uniform vec2 u_mouse;
 uniform float u_time;
+uniform vec2 mouse;
+uniform vec2 u_resolution;
 
-float plot(vec2 st, float pct){
-  return  smoothstep( pct-0.02, pct, st.y) - 
-          smoothstep( pct, pct+0.02, st.y);
-}
+vec4 contColor(vec2 p, float nh3, float nmvoc, float noX)
+{
+     vec4 color = vec4(0,0,0,1);
 
-void main() {
-    vec2 st = gl_FragCoord.xy/u_resolution;
-    vec3 color = vec3(0.);
-      st -= 0.5;
-
-    float r = length(st);
-    float a = atan (st.y, st.x)/3.1415;
-    a= a*.5+.5;
-
-
-
-    st = vec2(a,r);
-
-    vec3 pct = vec3(st.x);
-
-    pct.r = pow(pct.r+abs(sin(u_time))/2.0,0.7);
-    pct.g = pow(pct.r,0.8);
-    pct.b = pow(pct.r,2.0);
-
-    vec3 A = vec3  (1.0,0.0,0.0);
-    vec3 B = vec3  (0.0,0.0,1.0);
+     // germany
+     
+     if(p.y < 1.0 - nh3)color = vec4(1.0,0,0.0,1.0);
+     if(p.y < 1.0 - nmvoc)color = vec4(1.0,1.0,0,1); 
+     if(p.y < 1.0 - noX)color = vec4(1.0,1.0,0,1);
     
-    color = mix(A,B,pct);
-
-    color.r += plot(st, pct.r);
-    color.g += plot(st, pct.g);
-    color.b += plot(st, pct.b);
-
-    gl_FragColor = vec4(color,1.0);
+     return color;  
 }
+
+void main( void )
+{ 
+     vec2 p = gl_FragCoord.xy / u_resolution;
+
+     gl_FragColor = contColor(p, 0.3, 0.5, 0.7);
+} 
+ 
