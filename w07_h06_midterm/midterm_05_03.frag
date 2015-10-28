@@ -70,10 +70,10 @@ void main(void){
 	vec3 color = vec3(0.);
 	vec2 p1 = ( gl_FragCoord.xy / u_resolution.xy );
 
-	vec3 pct1 = mainrd(p1, 0.5,0.8,0.5);
+	vec3 pct1 = mainrd(p1, 0.25,0.3,0.0);
 	vec3 pct2 = mainrd(p1, 0.0,0.4,0.5);
 	vec3 pct3 = mainrd(p1, 0.5,1.3,0.0);
-	vec3 pct4 = mainrd(p1, 0.5,0.3,0.0);
+	vec3 pct4 = mainrd(p1, 0.75,0.3,0.0);
 	vec3 pct5 = mainrd(p1, 0.25,1.2,0.2);
 
 

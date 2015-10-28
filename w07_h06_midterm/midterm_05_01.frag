@@ -58,7 +58,7 @@ vec3 mainrd(vec2 p, float mya, float myw, float myh) {
 	float q1 = abs(p_width/pow(r1, fade_power));
 	q1 = ramp3*q1;
 	
-	col += vec3(0.0, q1, q1);	
+	// col += vec3(0.0, q1, q1);	
 	
 	float q2 = abs(p_width/pow(r2, fade_power));
 	q2 = ramp4*q2;
