@@ -1,0 +1,2 @@
+for the midterm project, I worked on a lot of different projects. I got some inspirations from glslsandbox.com but I also wanted to make a dream happen, and create my typography with neon lights, here oyu can check out this proejct: 
+http://nimabehravan.com/nb/
