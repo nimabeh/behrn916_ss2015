@@ -1,0 +1,1 @@
+The Final code for the shader studio class was inspired by idea of solidifying dreams. I chose 10 different shaders representing a scene during dreaming. I was more interested to project shaders on pictures and show my work. I also made a video you can see here: https://vimeo.com/149224325
